@@ -476,6 +476,8 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
         case id_vial_prefix: {
             vial_handle_cmd(data, length);
             break;
+        }
+#endif
 #ifdef RAW_HID_CMD
         case RAW_HID_CMD: {
             raw_hid_receive_kb(data, length);
